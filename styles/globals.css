@@ -12,9 +12,65 @@ a {
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* accordion */
+.custom__accordion {
+  width: 400px;
+  border: none;
+  box-shadow: none;
+  background: #000 !important;
+  color: aliceblue !important;
+  border: 4px solid #ddd !important;
+  border-radius: 0 !important;
+}
+
+.accordion-header {
+  outline: 0 !important;
+  border: none !important;
+  box-shadow: none;
+  /* background: #000 !important; */
+}
+.accordion-header button {
+  background: #056 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: center !important;
+  color: #fff !important;
+  text-transform: uppercase;
+  border: none !important;
+}
+
+.accordion-header button.collapsed {
+  border: none !important;
+}
+
+.accordion-header button::after {
+  display: none;
+}
+
+.accordion__icon {
+  position: absolute;
+  right: 20px;
+}
+
+.accordion-header button .accordion__icon.plus {
+  display: none;
+}
+.accordion-header button .accordion__icon.minus {
+  display: block;
+}
+.accordion-header button.collapsed .accordion__icon.plus {
+  display: block;
+}
+.accordion-header button.collapsed .accordion__icon.minus {
+  display: none;
+}
+
+/* accordion end */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
